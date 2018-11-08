@@ -1,0 +1,16 @@
+{
+  "name": "sfox-evaluation",
+  "version": "1.0.0",
+  "description": "Evaluates SFOX's limit ordering speed",
+  "main": "limitOrderTiming.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node limitOrderTiming.js"
+  },
+  "author": "Henry Barrow",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "ws": "^6.1.0"
+  }
+}
