@@ -75,13 +75,14 @@ async function main() {
     let interval = setInterval(() => {
         sfox.getOrderStatus(order.id)
             .then((data) => {
-                const endTs = (new Date()).getTime();
+                const messageTime = new Date()
+                const endTs = messageTime.getTime();
                 if (data.status_code === 300) {
                     clearInterval(interval);
-                    console.log('Status:', data.status, '\tMatching time:', endTs - startTs, 'ms');
+                    console.log(messageTime.toISOString(), 'Status:', data.status, '\tMatching time:', endTs - startTs, 'ms');
                     process.exit(0);
                 } else {
-                    console.log('Status:', data.status, '\tElapsed time:', endTs - startTs, 'ms');
+                    console.log(messageTime.toISOString(), 'Status:', data.status, '\tElapsed time:', endTs - startTs, 'ms');
                 }
             })
             .catch((error) => {
