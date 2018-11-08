@@ -26,7 +26,7 @@ if (process.argv.length > 2) {
     apiKey = process.argv[2];
 } else {
     try {
-        apiKey = fs.readFileSync('./apikey.txt', 'utf8').toString().split('\n')[0];
+        apiKey = fs.readFileSync('./apikey.txt', 'utf8').toString().split('\n')[0].split(' ')[0];
     } catch(err) {
         console.log('SFOX API key not found. Place your SFOX API key in a new file called "apikey.txt".\n' + 
                     '>\techo <your_api_key_here> >> apikey.txt')
