@@ -9,6 +9,10 @@
   },
   "author": "Henry Barrow",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hgbarrow/sfox-profiling.git"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "ws": "^6.1.0"
