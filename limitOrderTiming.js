@@ -11,7 +11,7 @@
     Composite.ai
 */
 const WebSocket = require('ws');
-const SFOX = require('./wrapper');
+const SFOX = require('./SFOXwrapper');
 const fs = require('fs');
 
 // Global variables
